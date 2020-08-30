@@ -23,7 +23,7 @@ pipeline {
 
         stage('fourth') {
           steps {
-            timestamps()
+            echo 'Cool Down'
           }
         }
 
@@ -31,8 +31,19 @@ pipeline {
     }
 
     stage('five') {
-      steps {
-        echo 'count down'
+      parallel {
+        stage('fifth') {
+          steps {
+            echo 'count down'
+          }
+        }
+
+        stage('sixth') {
+          steps {
+            echo 'Rerun Test'
+          }
+        }
+
       }
     }
 
