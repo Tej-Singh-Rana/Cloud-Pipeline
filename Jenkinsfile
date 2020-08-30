@@ -23,12 +23,16 @@ pipeline {
 
         stage('fourth') {
           steps {
-            sh '''#!/bin/bash
-
-echo -n "Fourth position"'''
+            timestamps()
           }
         }
 
+      }
+    }
+
+    stage('five') {
+      steps {
+        echo 'count down'
       }
     }
 
