@@ -15,6 +15,20 @@ pipeline {
           }
         }
 
+        stage('third') {
+          steps {
+            sleep(time: 2, unit: 'NANOSECONDS')
+          }
+        }
+
+        stage('fourth') {
+          steps {
+            sh '''#!/bin/bash
+
+echo -n "Fourth position"'''
+          }
+        }
+
       }
     }
 
