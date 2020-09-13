@@ -5,13 +5,16 @@ pipeline {
       parallel {
         stage('first') {
           steps {
-            echo 'Hello'
+            sh 'echo "Second testing"'
           }
         }
 
         stage('second') {
           steps {
-            echo 'Second '
+            sh '''sleep 5
+echo "Hello Edited Message"
+echo ""
+echo "Again trial"'''
           }
         }
 
@@ -40,7 +43,7 @@ pipeline {
 
         stage('sixth') {
           steps {
-            echo 'Rerun Test'
+            sleep 5
           }
         }
 
