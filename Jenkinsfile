@@ -5,16 +5,15 @@ pipeline {
       parallel {
         stage('first') {
           steps {
-            sh 'echo "Second testing"'
+            echo 'Second Testing'
           }
         }
 
         stage('second') {
           steps {
-            sh '''sleep 5
-echo "Hello Edited Message"
-echo ""
-echo "Again trial"'''
+            echo 'After failed previous testing repeated again'
+            sleep 2
+            echo 'On process'
           }
         }
 
