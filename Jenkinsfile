@@ -46,8 +46,17 @@ pipeline {
           }
         }
 
+        stage('') {
+          steps {
+            sh 'echo "${CLUSTER_NAME}"'
+          }
+        }
+
       }
     }
 
+  }
+  environment {
+    CLUSTER_NAME = 'KUBERNETES'
   }
 }
