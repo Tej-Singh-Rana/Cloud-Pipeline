@@ -46,12 +46,6 @@ pipeline {
           }
         }
 
-        stage('') {
-          steps {
-            sh 'echo "${CLUSTER_NAME}"'
-          }
-        }
-
       }
     }
 
