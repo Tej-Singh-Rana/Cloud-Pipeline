@@ -50,4 +50,7 @@ pipeline {
     }
 
   }
+  environment {
+    CLUSTER_NAME = 'KUBERNETES'
+  }
 }
